@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form id="registrationForm">
+        <h2>Pizza Registration</h2>
+
+        <!-- Name input: at least 3 characters -->
+        <label for="name">Name (at least 3 characters):</label>
+        <input type="text" id="name" name="name" required>
+        <div id="nameError" class="error hidden">Name should include at least 3 characters</div>
+
+        <!-- Year of birth: 1900 to now -->
+        <label for="year">Year of birth (1900 to now):</label>
+        <input type="number" id="year" name="year" required>
+        <div id="yearError" class="error hidden">Please input a valid year</div>
+
+        <!-- Checkbox: if live in America -->
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" id="usaCheckbox" onclick="toggleZipcode()"> Do you live in America?
+            </label>
+        </div>
+
+        <!-- Zipcode: 5 numbers -->
+        <div id="zipcodeField" class="hidden">
+            <label for="zipcode">Zipcode (5-digit):</label>
+            <input type="text" id="zipcode" name="zipcode">
+            <div id="zipcodeError" class="error hidden">Please input a valid 5-digit zipcode</div>
+        </div>
+
+        <!-- Password -->
+        <label for="password">Password (at least 8 characters):</label>
+        <input type="password" id="password" name="password" required>
+        <div id="passwordError" class="error hidden">Password requires at least 8 characters</div>
+
+        <!-- Pizza type preference: must choose 1 type -->
+        <div class="pizza-options">
+            <label>Pizza type preference:</label>
+            <select id="pizzaPreference" name="pizzaPreference" required>
+                <option value="" disabled selected>Please select one type:</option>
+                <option value="withPineapple">With pineapple</option>
+                <option value="withoutPineapple">Without pineapple</option>
+                <option value="noPreference">Don't like pizza</option>
+            </select>
+            <div id="pizzaPreferenceError" class="error hidden">Please select one type of pizza</div>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+
+        <!-- Message for successful submission -->
+        <div id="acceptedMessage" class="accepted hidden">Form is submitted successfully!</div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
