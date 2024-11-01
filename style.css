@@ -1,0 +1,99 @@
+/* Basic CSS style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form CSS style */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Input CSS style */
+input[type="text"],
+input[type="number"],
+input[type="password"],
+select {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Error: Red Characters To Inform Users */
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+/* To hide wrong message */
+.hidden {
+    display: none;
+}
+
+
+.checkbox-group {
+    margin-top: 10px;
+    display: flex;
+    align-items: center; /* Justify to align */
+}
+
+.checkbox-group label {
+    font-weight: normal; 
+}
+
+#zipcodeField {
+    margin-top: 10px;
+}
+
+.pizza-options {
+    margin-top: 10px;
+}
+
+/* Button style: hover action */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Form accepted -> turn green */
+.accepted {
+    color: green;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
